@@ -11,10 +11,7 @@ permissions:
     owner: apache
     group: apache
     mode: 755
-  - object: /var/www/html/restart_apache.sh
-    owner: root
-    group: root
-    mode: 750
+    pattern: "*"
 
 hooks:
   BeforeInstall:
@@ -25,4 +22,3 @@ hooks:
     - location: restart_apache.sh
       timeout: 30
       runas: root
-
